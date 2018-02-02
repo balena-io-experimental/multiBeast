@@ -1,0 +1,10 @@
+FROM resin/rpi-raspbian:jessie-20160511
+
+RUN apt-get update && apt-get install apache2
+
+ADD ./images /var/www/html/
+
+WORKDIR /usr/src/app
+ADD ./start.sh .
+
+CMD ./start.sh
