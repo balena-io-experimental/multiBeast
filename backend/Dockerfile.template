@@ -6,5 +6,6 @@ ADD ./images /var/www/html/
 
 WORKDIR /usr/src/app
 ADD ./start.sh .
+RUN chmod a+x ./start.sh
 
 CMD ./start.sh
